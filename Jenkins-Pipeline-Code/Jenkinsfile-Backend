@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/sruthimedapati/3-Tier-Project.git'
+                git branch: 'main', url: 'https://github.com/sruthimedapati/3-tier-end-to-end.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -74,12 +74,12 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/sruthimedapati/3-Tier-Project.git'
+                git branch: 'main', url: 'https://github.com/sruthimedapati/3-tier-end-to-end.git'
             }
         }
         stage('Update Deployment file') {
             environment {
-                GIT_REPO_NAME = "3-Tier-Project"
+                GIT_REPO_NAME = "3-tier-end-to-end"
                 GIT_USER_NAME = "sruthimedapati"
             }
             steps {
